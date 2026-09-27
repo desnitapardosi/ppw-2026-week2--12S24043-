@@ -4,25 +4,30 @@
 
 ## Deskripsi
 
-Project ini merupakan pengembangan halaman web portofolio pribadi yang dibuat sebagai bagian dari tugas praktikum Pemrograman dan Pengujian Aplikasi Web.
+Project ini merupakan pengembangan halaman web portofolio pribadi yang dibuat sebagai bagian dari tugas praktikum Pemrograman dan Pengujian Web.
 
-Website dikembangkan dalam bentuk single-page portfolio untuk menyajikan informasi akademik, kemampuan, proyek, serta layanan konsultasi secara terstruktur dan interaktif.
+Project ini merupakan kelanjutan dari tugas praktikum Minggu 2, di mana halaman portofolio yang sebelumnya dibangun menggunakan HTML5 semantik dan CSS murni kemudian dikembangkan dan direfaktor dengan menggunakan framework Bootstrap 5.3 serta Custom CSS.
 
-Pengembangan website menggunakan HTML5 dan Modern CSS dengan memperhatikan struktur semantik, responsive design, usability, dan accessibility. Website juga dilengkapi dengan formulir layanan menggunakan validasi HTML5.
+Website dikembangkan dalam bentuk single-page portfolio untuk menyajikan informasi akademik, kemampuan, proyek, dan layanan konsultasi secara terstruktur dan interaktif.
 
-Project ini menggunakan Git dan GitHub sebagai version control serta GitHub Pages sebagai media deployment website.
+Pada Minggu 3, pengembangan difokuskan pada integrasi Bootstrap 5.3, responsive navbar, responsive grid untuk project, Bootstrap Modal, Bootstrap Icons, serta integrasi Bootstrap dengan Custom CSS untuk mempertahankan identitas visual website.
+
+Project menggunakan Git dan GitHub sebagai version control serta GitHub Pages sebagai media deployment.
 
 ## Tujuan Project
 
 Project ini bertujuan untuk:
 
-- Mengimplementasikan struktur HTML5 semantik.
-- Menerapkan Modern CSS dalam pengembangan tampilan website.
-- Membuat halaman portofolio yang responsif dan accessible.
+- Melanjutkan dan mengembangkan project portofolio dari praktikum Minggu 2.
+- Mengintegrasikan framework Bootstrap 5.3 ke dalam halaman web.
+- Menerapkan responsive layout menggunakan Bootstrap Grid.
+- Membuat responsive navbar dengan fitur collapse.
+- Mengembangkan project cards dengan Bootstrap Grid.
+- Mengimplementasikan Bootstrap Modal untuk menampilkan detail proyek.
+- Menggunakan Bootstrap Icons untuk mendukung tampilan antarmuka.
+- Mempertahankan custom design melalui Custom CSS Overrides.
 - Menampilkan informasi akademik, proyek, dan keterampilan secara terstruktur.
-- Mengimplementasikan tabel semantik.
-- Membuat formulir layanan interaktif dengan validasi HTML5.
-- Menerapkan prinsip dasar accessibility.
+- Mempertahankan struktur HTML5 semantik dan prinsip accessibility.
 - Menggunakan Git dan GitHub untuk pengelolaan source code.
 - Melakukan deployment menggunakan GitHub Pages.
 
@@ -31,71 +36,77 @@ Project ini bertujuan untuk:
 | Informasi | Keterangan |
 |---|---|
 | Nama | Desnita Pardosi |
+| NIM | 12S24043 |
 | Program Studi | S1 Sistem Informasi |
 | Institusi | Institut Teknologi Del |
 | Angkatan | 2024 |
+| Mata Kuliah | Pemrograman dan Pengujian Web |
 | Tahun | 2026 |
 
 ## Teknologi yang Digunakan
 
 - HTML5
 - CSS3
+- Bootstrap 5.3.3
+- Bootstrap Icons 1.11.3
 - Flexbox
 - CSS Grid
 - Responsive Design
+- JavaScript
 - Git
 - GitHub
 - GitHub Pages
 
-## Implementasi HTML5
+## Pengembangan dari Minggu 2
 
-Website menggunakan elemen HTML5 semantik seperti:
+Project Minggu 3 merupakan refactoring dan pengembangan dari halaman portofolio Minggu 2.
 
-- `<header>`
-- `<nav>`
-- `<main>`
-- `<section>`
-- `<article>`
-- `<aside>`
-- `<footer>`
+| Aspek | Minggu 2 | Minggu 3 |
+|---|---|---|
+| Styling | HTML5 + CSS murni | Bootstrap 5.3 + Custom CSS |
+| Layout | Flexbox dan CSS Grid | Bootstrap Grid + Custom CSS |
+| Navbar | Navbar custom | Responsive Bootstrap Navbar |
+| Project | 3 proyek | 5 proyek |
+| Project Layout | CSS custom | Bootstrap Responsive Grid |
+| Detail Project | Informasi pada halaman | Bootstrap Modal |
+| Icons | Terbatas | Bootstrap Icons |
+| Responsive | Media Query CSS | Bootstrap Breakpoints + Custom CSS |
+| Form | Form HTML5 | Form dengan Bootstrap + HTML5 Validation |
+| Interaktivitas | CSS dan HTML | Bootstrap Components + JavaScript |
+| Deployment | GitHub Pages | GitHub Pages |
 
-Selain itu, website juga menggunakan elemen tabel, daftar, dan formulir sesuai kebutuhan project.
+## Implementasi Bootstrap 5.3
 
-## Implementasi Formulir
+Bootstrap 5.3.3 diintegrasikan melalui CDN pada bagian `<head>` untuk membantu membangun layout dan komponen responsive.
 
-Formulir layanan menggunakan beberapa jenis input HTML5, yaitu:
+Bootstrap digunakan pada beberapa bagian website, yaitu:
 
-- Text
-- Email
-- Telephone
-- Number
-- Radio
-- Checkbox
-- Select
-- Textarea
+- Responsive Navbar.
+- Responsive Grid untuk project cards.
+- Button dan utility classes.
+- Modal untuk detail proyek.
+- Bootstrap Icons.
+- Responsive spacing dan alignment.
 
-Setiap input dilengkapi dengan label dan validasi yang sesuai untuk membantu pengguna mengisi formulir dengan benar.
+Bootstrap JS Bundle juga digunakan agar komponen interaktif seperti navbar collapse dan modal dapat berfungsi.
 
-## Accessibility
+## Responsive Navbar
 
-Aspek accessibility diterapkan melalui:
+Navbar website dikembangkan menggunakan komponen Bootstrap dengan fitur responsive collapse.
 
-- Penggunaan HTML5 semantik.
-- Penggunaan `alt` pada gambar.
-- Penggunaan label pada setiap input.
-- Struktur heading yang teratur.
-- Penggunaan focus state.
-- Penggunaan validasi pada formulir.
-- Navigasi yang terstruktur.
-- Responsive layout untuk berbagai ukuran layar.
+Pada ukuran layar yang lebih kecil, menu navigasi dapat dibuka dan ditutup menggunakan tombol hamburger.
 
-## Responsive Design
+Struktur yang digunakan antara lain:
 
-Website menggunakan Flexbox, CSS Grid, dan Media Query agar tampilan dapat menyesuaikan ukuran layar desktop, tablet, maupun perangkat mobile.
+- `navbar`
+- `navbar-expand-lg`
+- `navbar-toggler`
+- `collapse`
+- `navbar-collapse`
 
-Contoh breakpoint yang digunakan:
+## Responsive Project Grid
 
-```css
-@media (max-width: 768px) {
-    ...
-}
+Project ditampilkan menggunakan Bootstrap Grid dengan konfigurasi:
+
+```html
+row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4
